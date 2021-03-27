@@ -14,4 +14,7 @@ fi
 python src/manage.py flush --no-input
 python src/manage.py migrate
 
-exec "$@"
+if [ "$1" != "" ]; then
+    exec "$@"
+    exit
+fi
