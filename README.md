@@ -37,4 +37,5 @@ source venv/bin/activate
 
 ## Links interessantes
 
-[Dockerizing Django](https://testdriven.io/blog/dockerizing-django-with-postgres-gunicorn-and-nginx/)
+- [Dockerizing Django](https://testdriven.io/blog/dockerizing-django-with-postgres-gunicorn-and-nginx/)
+- [Makefile Django](https://dev.to/xarala221/how-to-become-more-productive-using-makefile-579b/)
