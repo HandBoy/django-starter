@@ -4,7 +4,7 @@ help: 	## Show this help.
 	@echo "Please use \`make <target>' where <target> is one of"
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?##"}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 
-deploy: ## Builds Docker images from a Dockerfile setting a enviroment. 
+build: ## Builds Docker images from a Dockerfile setting a enviroment. 
 	docker-compose build --build-arg APP_ENVIROMENT="$(SETTINGS)"
 
 up:		## Builds, (re)creates, starts, and attaches to containers for a service web.
@@ -27,4 +27,4 @@ clean:	## remove all ".pyc" files
 	-rm -rf .coverage
 	-rm -rf .pytest_cache
 
-run: deploy
+run: up
